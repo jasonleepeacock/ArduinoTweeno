@@ -4,8 +4,6 @@
 using namespace std;
 
 Tween::Tween(int duration, float range[]){
-	cout << "made tween\n";
-
 	// TODO - ensure values are valid
 	_domain[0] = 0;
 	_domain[1] = duration;

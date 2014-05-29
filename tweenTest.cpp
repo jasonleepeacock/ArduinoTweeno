@@ -1,6 +1,6 @@
 #include <iostream>
-#include "Tween.h"
 #include <math.h>
+#include "Tween.h"
 
 using namespace std;
 

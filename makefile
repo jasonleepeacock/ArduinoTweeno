@@ -1,7 +1,8 @@
-all: pixelTest
+all:	
 	# g++ -Isrc tweenTest.cpp src/Tween.cpp -o build/tweenTest
-	# g++ -Isrc pixelTest.cpp src/Tween.cpp src/Pixel.cpp -o build/pixelTest -g
-	# g++ pixelTest.cpp Pixel.o Tween.o -o build/pixelTest
+	g++ -Isrc pixelTest.cpp src/Tween.cpp src/Pixel.cpp -o build/pixelTest -g
+
+# all: pixelTest
 
 pixelTest: Pixel.o Tween.o
 	g++ pixelTest.cpp Pixel.o Tween.o -o build/pixelTest
