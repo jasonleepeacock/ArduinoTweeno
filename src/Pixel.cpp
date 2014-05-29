@@ -18,7 +18,8 @@ Pixel::Pixel(){
 void Pixel::tick(){
 	cout << "tick\n";
 	// iterate tweens and tick each
-	// r->tick();
+	// r.tick();
+	r->tick();
 	// g->tick();
 	// b->tick();
 	// a->tick();

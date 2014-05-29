@@ -1,4 +1,4 @@
-#include <Tween.h>
+#include "Tween.h"
 #include <iostream>
 
 using namespace std;
@@ -21,13 +21,9 @@ Tween::Tween(int duration, float range[]){
 	_currFrame = 0;
 
 	_isDone = false;
-
-	cout << "duration " << _duration << "\n";
 }
 
 void Tween::tick(){
-
-	cout << "duration " << _duration << "\n";
 	if(_isDone || _duration == 0){
 		return;
 	} else {
@@ -40,7 +36,7 @@ void Tween::tick(){
 
 float Tween::getX(){
 
-	cout << "duration " << _duration << "\n";
+	// cout << "duration " << _duration << "\n";
 	// if _duration is 0, then this tween
 	// can just return a constant value
 	if(_duration == 0){
@@ -61,9 +57,9 @@ float Tween::_scaleLinear(int x){
 
 // TODO - ease out :(
 float Tween::_scaleEaseOut(int x){
-	// float scaleFactor = float(x) / _domain[1];
-	// float result = (scaleFactor + ((1-scaleFactor) * .01)) * (_range[1] - _range[0]) + _range[0];
-	// return result;
+	float scaleFactor = float(x) / _domain[1];
+	float result = (scaleFactor + ((1-scaleFactor) * .01)) * (_range[1] - _range[0]) + _range[0];
+	return result;
 }
 float Tween::_scaleEaseIn(int x){
 	float scaleFactor = float(x) / _domain[1];
