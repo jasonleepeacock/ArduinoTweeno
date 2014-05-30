@@ -3,9 +3,12 @@
 
 #include "Tween.h"
 
+// TODO - accept hex and convert to rgb
+// TODO - more sane init function signature
+
 class Pixel {
 public:
-	Pixel();
+	void init(int duration, float rangeR[2], float rangeG[2], float rangeB[2], float rangeA[2]);
 	
 	Tween r;
 	Tween g;

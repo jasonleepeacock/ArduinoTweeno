@@ -4,17 +4,12 @@
 
 using namespace std;
 
-Pixel::Pixel(){
-	// TODO - pass in duration and start/end values for each px
-	int duration = 10;
-	float range [2] = {0, 255};
-	float alphaRange [2] = {0, 1};
-	r.init(duration, range);
-	g.init(duration, range);
-	b.init(duration, range);
-	a.init(duration, alphaRange);
+void Pixel::init(int duration, float rangeR[2], float rangeG[2], float rangeB[2], float rangeA[2]){
+	r.init(duration, rangeR);
+	g.init(duration, rangeG);
+	b.init(duration, rangeB);
+	a.init(duration, rangeA);
 }
-
 void Pixel::tick(){
 	r.tick();
 	g.tick();

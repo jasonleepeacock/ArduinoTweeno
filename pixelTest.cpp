@@ -7,15 +7,23 @@ using namespace std;
 
 main(){
 
-	Pixel a;
+	Pixel px;
 
-	for(int i = 0; i < 10; i++){
-		a.tick();
-		cout << "r: " << floor(a.getr());
-		cout << " g: " << floor(a.getg());
-		cout << " b: " << floor(a.getb());
-		cout << " a: " << a.geta();
+	int duration = 10;
+	float rangeR[2] = {0, 255};
+	float rangeG[2] = {0, 255};
+	float rangeB[2] = {0, 255};
+	float rangeA[2] = {0, 1};
+
+	px.init(duration, rangeR, rangeG, rangeB, rangeA);
+
+	for(int i = 0; i < duration; i++){
+		cout << "r: " << floor(px.getr());
+		cout << " g: " << floor(px.getg());
+		cout << " b: " << floor(px.getb());
+		cout << " a: " << px.geta();
 		cout << "\n";
+		px.tick();
 	}
 }
 

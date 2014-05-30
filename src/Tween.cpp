@@ -16,18 +16,34 @@ void Tween::init(int duration, float range[]){
 	// do we need to even store duration?
 	_duration = duration;
 
+	// TODO - get this from user
+	loop = true;
+
 	_currFrame = 0;
 
 	_isDone = false;
 }
 
 void Tween::tick(){
-	if(_isDone || _duration == 0){
+	// tween should just return a static val
+	if(_duration == 0 || _isDone){
 		return;
+
+	// count frames
 	} else {
 		_currFrame++;
+
+		// if were at the end of the tween animation
 		if(_currFrame == _duration){
-			_isDone = true;
+
+			// if tween should loop, reset _currFrame
+			if(loop){
+				_currFrame = 0;
+
+			// otherwise tween is done
+			} else {
+				_isDone = true;
+			}		
 		}
 	}	
 }

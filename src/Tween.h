@@ -31,6 +31,10 @@ private:
 	float _scaleEaseOut(int x);
 	float _scaleEaseIn(int x);
 
+	bool loop;
+
+	// TODO - yoyo
+
 	// input domain
 	int _domain [2];
 
