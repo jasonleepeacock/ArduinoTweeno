@@ -13,18 +13,15 @@ main(){
 	// duration in frames
 	int duration = 10;
 
-	// create a tween for each subpixel
-	// (red, green, blue) and use the same
-	// duration. realistically the range would
-	// differ from subpixel to subpixel
-	// TODO - loop and reverse options
-	Tween r(duration, range);
-	Tween g(duration, range);
-	// a duration of zero means this tween will
-	// always return the first value of range. IE
-	// it is a constant value tween
-	Tween b(0, range);
-	Tween a(duration, rangeAlpha);
+	Tween r;
+	Tween g;
+	Tween b;
+	Tween a;
+
+	r.init(duration, range);
+	g.init(duration, range);
+	b.init(0, range);
+	a.init(duration, rangeAlpha);
 
 	// "play" each tween a frame at a time
 	// and output the value
@@ -36,9 +33,9 @@ main(){
 		b.tick();
 		a.tick();
 		cout << "r: " << floor(r.getX());
-		// cout << " g: " << floor(g.getX());
-		// cout << " b: " << floor(b.getX());
-		// cout << " a: " << a.getX();
+		cout << " g: " << floor(g.getX());
+		cout << " b: " << floor(b.getX());
+		cout << " a: " << a.getX();
 		cout << "\n";
 	}
 }

@@ -3,7 +3,7 @@
 
 using namespace std;
 
-Tween::Tween(int duration, float range[]){
+void Tween::init(int duration, float range[]){
 	// TODO - ensure values are valid
 	_domain[0] = 0;
 	_domain[1] = duration;

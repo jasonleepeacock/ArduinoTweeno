@@ -10,7 +10,7 @@ public:
 	// range: int array with 2 values: the min
 	// and max values that the scale should return
 	// duration: duration of the tween in frames
-	Tween(int duration, float range[]);
+	void init(int duration, float range[]);
 
 	// advances the playhead by one frame (or if
 	// tween is reversing, reverses the playhead
