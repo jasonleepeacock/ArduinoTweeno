@@ -1,7 +1,7 @@
 #ifndef TWEEN_H
 #define TWEEN_H
 
-// TODO - loop, reverse
+// TODO - reverse
 // TODO - start, stop, pause, rewind
 // TODO - start delay, end delay
 
