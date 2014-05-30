@@ -1,7 +1,7 @@
 #ifndef TWEEN_H
 #define TWEEN_H
 
-#include <array>
+//#include <array>
 
 // TODO - reverse
 // TODO - start, stop, pause, rewind
