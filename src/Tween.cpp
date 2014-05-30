@@ -3,15 +3,18 @@
 
 using namespace std;
 
-void Tween::init(int duration, float range[]){
+Tween::Tween(int duration, float range[])
+: _domain{0, duration}
+, _range{range[0], range[1]}
+{
 	// TODO - ensure values are valid
-	_domain[0] = 0;
-	_domain[1] = duration;
+	//_domain[0] = 0;
+	//_domain[1] = duration;
 
 	// there has to be a better way to
 	// assign one array to another :/
-	_range[0] = range[0];
-	_range[1] = range[1];
+	//_range[0] = range[0];
+	//_range[1] = range[1];
 
 	// do we need to even store duration?
 	_duration = duration;

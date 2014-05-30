@@ -4,7 +4,7 @@
 
 using namespace std;
 
-main(){
+int main(){
 
 	// range[0] is starting value
 	// range[1] is ending value
@@ -13,15 +13,10 @@ main(){
 	// duration in frames
 	int duration = 10;
 
-	Tween r;
-	Tween g;
-	Tween b;
-	Tween a;
-
-	r.init(duration, range);
-	g.init(duration, range);
-	b.init(0, range);
-	a.init(duration, rangeAlpha);
+	Tween r(duration, range);
+	Tween g(duration, range);
+	Tween b(0, range);
+	Tween a(duration, rangeAlpha);
 
 	// "play" each tween a frame at a time
 	// and output the value

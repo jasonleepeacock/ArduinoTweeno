@@ -1,6 +1,8 @@
 #ifndef TWEEN_H
 #define TWEEN_H
 
+#include <array>
+
 // TODO - reverse
 // TODO - start, stop, pause, rewind
 // TODO - start delay, end delay
@@ -10,7 +12,7 @@ public:
 	// range: int array with 2 values: the min
 	// and max values that the scale should return
 	// duration: duration of the tween in frames
-	void init(int duration, float range[]);
+	Tween(int duration, float range[]);
 
 	// advances the playhead by one frame (or if
 	// tween is reversing, reverses the playhead
@@ -36,10 +38,12 @@ private:
 	// TODO - yoyo
 
 	// input domain
-	int _domain [2];
+    //std::array<int, 2> _domain;
+    int _domain[2];
 
 	// output range
-	float _range [2];
+    //std::array<float, 2> _range;
+    float _range[2];
 
 	// current frame / playhead position
 	int _currFrame;

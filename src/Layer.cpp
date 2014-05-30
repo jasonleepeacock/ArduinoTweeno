@@ -7,7 +7,6 @@ void Layer::init(){
 	// Serial.begin(9600);
 
 	for(int i = 0; i < NUM_PX; i++){
-		Pixel px;
 
 		// TODO - get these vals from user
 		int duration = 120;
@@ -16,7 +15,7 @@ void Layer::init(){
 		float rangeB[2] = {0, 0};
 		float rangeA[2] = {0, 1};
 
-		px.init(duration, rangeR, rangeG, rangeB, rangeA);
+		Pixel px(duration, rangeR, rangeG, rangeB, rangeA);
 		pixels[i] = px;
 	}
 }

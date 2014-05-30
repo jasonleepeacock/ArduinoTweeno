@@ -5,9 +5,7 @@
 
 using namespace std;
 
-main(){
-
-	Pixel px;
+int main(){
 
 	int duration = 10;
 	float rangeR[2] = {0, 255};
@@ -15,7 +13,7 @@ main(){
 	float rangeB[2] = {0, 255};
 	float rangeA[2] = {0, 1};
 
-	px.init(duration, rangeR, rangeG, rangeB, rangeA);
+	Pixel px(duration, rangeR, rangeG, rangeB, rangeA);
 
 	for(int i = 0; i < duration; i++){
 		cout << "r: " << floor(px.getr());
